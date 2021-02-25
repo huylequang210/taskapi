@@ -55,7 +55,7 @@ class Model {
   }
 
   public function fetchAllTasks() {
-    $query = $this->db->prepare('SELECT * FROM task');
+    $query = $this->db->prepare('SELECT * FROM task ORDER BY id');
     $query->execute();
     return $query->fetchAll();
   }
